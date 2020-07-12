@@ -1,0 +1,12 @@
+/Users/noamhorovitz/Projects/RiskifiedServer/RiskifiedServer/bin/Debug/netcoreapp3.1/RiskifiedServer.deps.json
+/Users/noamhorovitz/Projects/RiskifiedServer/RiskifiedServer/bin/Debug/netcoreapp3.1/RiskifiedServer.runtimeconfig.json
+/Users/noamhorovitz/Projects/RiskifiedServer/RiskifiedServer/bin/Debug/netcoreapp3.1/RiskifiedServer.runtimeconfig.dev.json
+/Users/noamhorovitz/Projects/RiskifiedServer/RiskifiedServer/bin/Debug/netcoreapp3.1/RiskifiedServer.dll
+/Users/noamhorovitz/Projects/RiskifiedServer/RiskifiedServer/bin/Debug/netcoreapp3.1/RiskifiedServer.pdb
+/Users/noamhorovitz/Projects/RiskifiedServer/RiskifiedServer/obj/Debug/netcoreapp3.1/RiskifiedServer.csprojAssemblyReference.cache
+/Users/noamhorovitz/Projects/RiskifiedServer/RiskifiedServer/obj/Debug/netcoreapp3.1/RiskifiedServer.AssemblyInfoInputs.cache
+/Users/noamhorovitz/Projects/RiskifiedServer/RiskifiedServer/obj/Debug/netcoreapp3.1/RiskifiedServer.AssemblyInfo.cs
+/Users/noamhorovitz/Projects/RiskifiedServer/RiskifiedServer/obj/Debug/netcoreapp3.1/RiskifiedServer.csproj.CoreCompileInputs.cache
+/Users/noamhorovitz/Projects/RiskifiedServer/RiskifiedServer/obj/Debug/netcoreapp3.1/RiskifiedServer.dll
+/Users/noamhorovitz/Projects/RiskifiedServer/RiskifiedServer/obj/Debug/netcoreapp3.1/RiskifiedServer.pdb
+/Users/noamhorovitz/Projects/RiskifiedServer/RiskifiedServer/obj/Debug/netcoreapp3.1/RiskifiedServer.genruntimeconfig.cache
