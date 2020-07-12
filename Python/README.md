@@ -22,11 +22,11 @@ This will start the server on port **5000**.
 
 If everything works fine you should be able to access the `/healthcheck` endpoint and receive the following response:
 
-![simulation preview](https://drive.google.com/uc?id=1BRA4_v_tHWgR1KR2-buYey_82g0KnZlZ)
+![simulation preview](https://drive.google.com/uc?id=1IuIjsztYFQc3l5oObSDlqdh3T7NraU6d)
 
 ### Mock server
 
-As part of the simulation there is a mock server that you will have to work against. In order to make sure things are as smooth as possible we've made sure that upon accessing the `/healtcheck` endpoint we're also checking whether the mock server is accessible. If it fails please **contact your interviewer ASAP**.
+As part of the simulation there is a mock server that you will have to work against. In order to make sure things are as smooth as possible we've made sure that upon accessing the `/healthcheck` endpoint we're also checking whether the mock server is accessible. If it fails please **contact your interviewer ASAP**.
 
 
 ### Good luck!
