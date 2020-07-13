@@ -14,8 +14,14 @@ public class HealthcheckController {
 	private final RestTemplate restTemplate;
 	private final String creditCardServiceHealthcheckUrl = Constants.CREDIT_CARD_SERVICE_URL + "/healthcheck";
 
-	public HealthcheckController(RestTemplateBuilder restTemplateBuilder) {
+	public HealthcheckController(RestTemplateBuilder restTemplateBuilder) throws Exception {
 		this.restTemplate = restTemplateBuilder.build();
+
+		try {
+			this.restTemplate.getForObject(creditCardServiceHealthcheckUrl, String.class);
+		} catch (Exception ex) {
+			throw new Exception("Credit card service is unavailable! please contact your interviewer!");
+		}
 	}
 
 
@@ -29,4 +35,6 @@ public class HealthcheckController {
 			return new ResponseEntity<>("Credit card service is unavailable! please contact your interviewer!", HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
+
+
 }
