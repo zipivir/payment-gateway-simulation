@@ -24,7 +24,7 @@ public class HealthcheckController {
 		try {
 			this.restTemplate.getForObject(creditCardServiceHealthcheckUrl, String.class);
 
-			return new ResponseEntity<>("OK", HttpStatus.OK);
+			return new ResponseEntity<>("{\"status\":\"OK\"}", HttpStatus.OK);
 		} catch (Exception ex) {
 			return new ResponseEntity<>("Credit card service is unavailable! please contact your interviewer!", HttpStatus.INTERNAL_SERVER_ERROR);
 		}
