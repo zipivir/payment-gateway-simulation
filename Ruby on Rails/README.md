@@ -12,8 +12,6 @@ Once you've cloned this repo you should first run:
 
 ### Running the server
 
-The root directory for this project is 'charge-api'. Make sure to open this project in the IDE and run the commands from there. 
-
 In order to run the server, you should just run the following command:
 
     rails s
