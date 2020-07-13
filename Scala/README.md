@@ -6,11 +6,13 @@ In a console, change directories to /payment-gateway-simulation/Scala.
 
 ### Start sbt:
 
-On OSX or Linux systems, enter ./sbt
-On Windows systems, enter sbt.bat.
-When you run sbt, it downloads project dependencies. The > prompt indicates that sbt is running in interactive mode.
+- On OSX or Linux systems, enter `./sbt`
+- On Windows systems, enter `sbt.bat`.
 
-At the sbt prompt, enter reStart.
+When you run sbt, it downloads project dependencies. 
+The `>` prompt indicates that sbt is running in interactive mode.
+
+At the sbt prompt, enter `reStart`.
 
 sbt builds the project, starts an Akka HTTP server, and runs the example application.
 
@@ -24,4 +26,4 @@ The output should look something like this:
 ```
 The Akka HTTP server is now running, and you can test it by sending simple HTTP requests.
 
-You can restart it by entering reStart again, and stop it with reStop. To restart your application each time a change is detected, run ~reStart.
+You can restart it by entering reStart again, and stop it with `reStop`. To restart your application each time a change is detected, run `~reStart`.
