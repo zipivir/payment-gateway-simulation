@@ -1,10 +1,10 @@
-#Scala payment-gateway skeleton
+# Scala payment-gateway skeleton
 This skeleton is based on [Akka HTTP Quickstart for Scala](https://developer.lightbend.com/guides/akka-http-quickstart-scala/)
-##To run the payment-gateway:
+## To run the payment-gateway:
 
 In a console, change directories to /payment-gateway-simulation/Scala.
 
-###Start sbt:
+### Start sbt:
 
 On OSX or Linux systems, enter ./sbt
 On Windows systems, enter sbt.bat.
