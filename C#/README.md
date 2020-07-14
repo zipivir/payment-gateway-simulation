@@ -12,7 +12,7 @@ This will start the server on port **8000**.
 
 If everything works fine you should be able to access the `/healthcheck` endpoint and receive the following response:
 
-![simulation preview](https://drive.google.com/file/d/1a9PkILrhkHL0m4MAFwy4LCaW5PaUk-5m/view?usp=sharing)
+![simulation preview](https://drive.google.com/uc?id=1a9PkILrhkHL0m4MAFwy4LCaW5PaUk-5m)
 
 ### Mock server
 
