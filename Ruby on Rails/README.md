@@ -16,7 +16,7 @@ In order to run the server, you should just run the following command:
 
     rails s
 
-This will start the server on port **3000**.
+This will start the server on port **8000**.
 
 If everything works fine you should be able to access the `/healthcheck` endpoint and receive the following response:
 
