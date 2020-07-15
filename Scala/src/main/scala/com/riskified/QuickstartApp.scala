@@ -5,6 +5,7 @@ import akka.actor.typed.scaladsl.Behaviors
 import akka.actor.typed.scaladsl.adapter._
 import akka.http.scaladsl.Http
 import akka.http.scaladsl.server.Route
+
 import scala.concurrent.ExecutionContext
 import scala.util.{Failure, Success}
 
@@ -31,25 +32,6 @@ object QuickstartApp {
     }
   }
 
-  private def performCreditCardMockHealthcheck(
-    httpClient: HttpClient,
-    system: akka.actor.typed.ActorSystem[_]
-  )(implicit ec: ExecutionContext): Unit = {
-    httpClient
-      .get("http://interview.riskxint.com/healthcheck")
-      .onComplete {
-        case Success(res) if res.status.isSuccess =>
-          system.log.info("interview.riskxint.com is healthy")
-        case Success(res) =>
-          system.log.error(
-            "interview.riskxint.com is unhealthy. response code: {}",
-            res.status
-          )
-        case Failure(ex) =>
-          system.log.error("interview.riskxint.com is unhealthy", ex)
-      }
-  }
-
   def main(args: Array[String]): Unit = {
     val rootBehavior = Behaviors.setup[Nothing] { context =>
       implicit val classicSystem: akka.actor.ActorSystem =
@@ -57,9 +39,10 @@ object QuickstartApp {
       implicit val executionContext: ExecutionContext =
         context.system.executionContext
 
-      startHttpServer(Healthcheck.route, context.system)
-
-      performCreditCardMockHealthcheck(new HttpClient(), context.system)
+      startHttpServer(
+        new Healthchecker(new HttpClient(), context.system).route,
+        context.system
+      )
 
       Behaviors.empty
     }
