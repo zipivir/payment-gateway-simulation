@@ -21,17 +21,31 @@ const paymentsController = {
         try {
             const result = await paymentsService.charge(req);
             console.log('paymentController result: ', result);
-            res.json();
+            if (result === "OK") {
+                res.status(200).json();
+            }
+            else
+                res.status(200).json(result);
         } 
         catch (err) {
             console.log('paymentController error: ', err);
-            res.json({
-                decline_reason: err.message
+            res.status(400).json({
+                error: err.message
             });
-        }
-
-        
+        }        
     },
+
+    chargeStatuses: (req: Request, res: Response) => {
+        try {
+
+        }
+        catch (err) {
+            console.log('paymentController error: ', err);
+            res.status(400).json({
+                error: err.message
+            });
+        } 
+    }
 };
 
 

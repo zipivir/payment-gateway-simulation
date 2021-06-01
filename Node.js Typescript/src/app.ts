@@ -27,7 +27,6 @@ app.use('/healthcheck', healthcheckRouteRoute);
 app.use('/api', paymentsRoute);
 
 
-
 class ResponseError extends Error {
     status?: number;
 }

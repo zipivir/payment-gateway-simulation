@@ -28,10 +28,11 @@ const paramsValidation = {
     auth: (req: Request, res: Response, next: Function) => {
         if (req.headers['merchant-identifier']) {
             //check if merchant signed up?
+            console.log('merchant: ', MERCHANTS[`${req.headers['merchant-identifier']}`] )
             if (MERCHANTS[`${req.headers['merchant-identifier']}`])
                 next();
         }
-        return res.status(400).end('');
+        return res.status(400);
     },
 
     chargeSchema: async (req: Request, res: Response, next: Function): Promise<any> => {
@@ -45,13 +46,18 @@ const paramsValidation = {
             amount: Joi.number().required(),
         });    
 
-        const { error, value } = await schema.validateAsync(req.body, OPTIONS);
-    
-        if (error) {
-            next(`Validation error: ${error.details.map((x: { message: any; }) => x.message).join(', ')}`);
-        } else {
-            // req.body = value;
-            next();
+        try {
+            const { error, value } = await schema.validateAsync(req.body, OPTIONS);
+
+            if (error) {
+                logger.error(`Validation error: ${error.details.map((x: { message: any; }) => x.message).join(', ')}`);
+                next(false);
+            } else
+                next()
+        }
+        catch(err) {
+            logger.error("validation error ", err);
+            next(false);
         }
     }
 }
